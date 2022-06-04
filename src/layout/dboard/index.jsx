@@ -16,6 +16,7 @@ const DBoard = styled(Element)`
     display:flex;
 
     .left{
+        max-width:400px;
         flex:1;
         overflow:scroll;
     }
