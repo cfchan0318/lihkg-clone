@@ -20,11 +20,11 @@ const Element = ({ className,id,user,title,pages }) => {
 
 const Post = styled(Element)`
   min-height: 100px;
-  width: 400px;
+  
+ 
   border-radius: 10px;
-  background-color:#16161a;
+  background-color:#242629;
   padding: 30px;
-  margin-bottom:10px;
 
   .post-header{
       display:flex;
@@ -36,17 +36,20 @@ const Post = styled(Element)`
   }
   .post-user{
       color:#fffffe;
+      font-size:16px;
   }
   .post-pages{
       flex:2;
       display:flex;
       justify-content: flex-end;
       color: #7f5af0;
+      font-size:16px;
   }
 
   .post-content>span{
-      font-size: 24px;
+      font-size: 18px;
       color:#94a1b2;
+      
   }
 
 `

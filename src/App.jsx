@@ -1,8 +1,8 @@
 import React from "react";
-import Post from "./components/posts";
+import PostList from "./components/post-list";
 
 function App() {
-  const postData = [
+  const posts = [
     {
       "user": "Evelyn Cantu",
       "title": "dolor, nonummy ac, feugiat non, lobortis quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper eu, euismod ac, fermentum vel, mauris.",
@@ -31,9 +31,7 @@ function App() {
   ];
   return (
     <div className="App">
-      {postData.map(post => (
-        <Post user={post.user} title={post.title} pages={post.pages}/>
-      ))}
+      <PostList posts={posts}></PostList>
       
     </div>
   );
