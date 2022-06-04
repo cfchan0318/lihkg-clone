@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledPost from '../post'
 
+
 const PostList = ({ className, posts }) => {
   return (
     <div className={className}>
+      
       {posts.map((post, index) => (
         <div className="post" key={index}>
           <StyledPost
@@ -25,7 +27,6 @@ const StyledPostList = styled(PostList)`
   background-color: #16161a;
   padding:10px;
   height:100%;
-  overflow-y:scroll;
 
   .post {
     width:100%;

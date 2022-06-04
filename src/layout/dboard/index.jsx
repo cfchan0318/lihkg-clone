@@ -16,13 +16,24 @@ const DBoard = styled(Element)`
     display:flex;
 
     .left{
-        max-width:400px;
         flex:1;
-        overflow:scroll;
+        overflow-y:scroll;
     }
     .right{
         flex:2;
     }
+
+    @media (max-width: 767px) {
+        .right {
+          display: none;
+        }
+      }
+    
+      @media (min-width: 992px) {
+        .left {
+          max-width:400px;
+        }
+      }
 `
 
 export default DBoard;

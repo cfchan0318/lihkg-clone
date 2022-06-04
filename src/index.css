@@ -18,3 +18,16 @@ html{
 body{
   overflow: hidden;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2cb67d; 
+  border-radius: 10px;
+}
