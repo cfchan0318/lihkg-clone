@@ -2,6 +2,7 @@ import React from "react";
 import DBoard from "./layout/dboard";
 import StyledPostList from "./components/post-list";
 import StyledPostListHeader from "./components/post-list-header";
+import StyledPostHeader from "./components/post-header";
 
 function App() {
   const posts = [
@@ -79,6 +80,11 @@ function App() {
           <div>
             <StyledPostListHeader/>
             <StyledPostList posts={posts} />
+          </div>
+        }
+        right={
+          <div>
+            <StyledPostHeader></StyledPostHeader>
           </div>
         }
       />
