@@ -4,7 +4,9 @@ import styled from 'styled-components'
 const PostListHeader = ({ className }) => {
   return (
     <div className={className}>
-      <div class="post-list-header-left"></div>
+      <div class="post-list-header-left">
+        <i onClick={() => { alert(); }} class="fi fi-rr-menu-burger" />   
+      </div>
       <div class="post-list-header-center">React</div>
       <div class="post-list-header-right"></div>
     </div>
@@ -22,6 +24,8 @@ const StyledPostListHeader = styled(PostListHeader)`
 
   .post-list-header-left {
     flex: 1;
+    padding-left:10px;
+    color:white;
   }
   .post-list-header-center {
     flex: 1;
@@ -31,6 +35,7 @@ const StyledPostListHeader = styled(PostListHeader)`
   }
   .post-list-header-right {
     flex: 1;
+    padding-right:10px;
   }
 `
 export default StyledPostListHeader
