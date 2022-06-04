@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
 
-const Element = ({ className,id,user,title,pages }) => {
+const Post = ({ className,id,user,title,pages }) => {
     return (
         <div className={className}>
             <div className='post-header'>
@@ -18,10 +18,8 @@ const Element = ({ className,id,user,title,pages }) => {
     );
 }
 
-const Post = styled(Element)`
+const StyledPost = styled(Post)`
   min-height: 100px;
-  
- 
   border-radius: 10px;
   background-color:#242629;
   padding: 30px;
@@ -54,4 +52,4 @@ const Post = styled(Element)`
 
 `
 
-export default Post;
+export default StyledPost;

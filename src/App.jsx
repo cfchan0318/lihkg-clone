@@ -1,5 +1,6 @@
 import React from "react";
-import PostList from "./components/post-list";
+import DBoard from "./layout/dboard";
+import StyledPostList from "./components/post-list";
 
 function App() {
   const posts = [
@@ -27,11 +28,55 @@ function App() {
       "user": "Drew Stevens",
       "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
       "pages": 5
+    },
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
+    },
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
+    },
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
+    }
+    ,
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
+    },
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
+    },
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
+    },
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
+    },
+    {
+      "user": "Drew Stevens",
+      "title": "ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",
+      "pages": 5
     }
   ];
   return (
     <div className="App">
-      <PostList posts={posts}></PostList>
+      <DBoard
+        left={<StyledPostList posts={posts}></StyledPostList>}
+      />
+      
       
     </div>
   );
