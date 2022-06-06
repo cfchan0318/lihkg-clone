@@ -32,6 +32,7 @@ const DBoard = styled(Element)`
       @media (min-width: 992px) {
         .left {
           max-width:400px;
+          border-right: 1px solid #16161a;
         }
       }
 `
