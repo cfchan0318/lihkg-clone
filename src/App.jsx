@@ -3,6 +3,7 @@ import DBoard from "./layout/dboard";
 import StyledPostList from "./components/post-list";
 import StyledPostListHeader from "./components/post-list-header";
 import StyledPostHeader from "./components/post-header";
+import StyledReply from "./components/reply";
 
 function App() {
   const posts = [
@@ -85,6 +86,7 @@ function App() {
         right={
           <div>
             <StyledPostHeader></StyledPostHeader>
+            <StyledReply></StyledReply>
           </div>
         }
       />
