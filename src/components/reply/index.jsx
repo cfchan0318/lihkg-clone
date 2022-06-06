@@ -2,9 +2,13 @@ import React from 'react'
 import Styled from 'styled-components'
 
 const reply = ({ className }) => {
-    return (<div className={className}>
-      
-  </div>)
+  return (
+    <div className={className}>
+      <div className="reply-header">
+        sadsd
+      </div>
+    </div>
+  )
 }
 
 const StyledReply = Styled(reply)`
@@ -13,5 +17,9 @@ const StyledReply = Styled(reply)`
     background-color:#242629;
     padding: 30px;
     margin:10px;
+
+    .reply-header{
+      display:flex;
+    }
 `
 export default StyledReply
