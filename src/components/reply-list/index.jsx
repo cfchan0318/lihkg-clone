@@ -1,10 +1,12 @@
 import React from "react";
 import Styled from 'styled-components';
 import StyledReply from "../reply";
+import StyledPagination from "../pagination";
 
 const ReplyList = ({ className }) => {
     return (
         <div className={className}>
+            <StyledPagination></StyledPagination>
             <StyledReply></StyledReply>
             <StyledReply></StyledReply>
             <StyledReply></StyledReply>

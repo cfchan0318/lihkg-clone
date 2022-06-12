@@ -37,14 +37,20 @@ const reply = ({ className }) => {
       </div>
 
       <div className="reply-footer">
-        like
+        <div className='upvote'>
+            <i class="fi fi-rr-thumbs-up" />
+            <span>123</span>
+        </div>
+        <div className='downvote'>
+          <i class="fi fi-rr-thumbs-down" />
+          <span>123</span>
+        </div>
       </div>
     </div>
   )
 }
 
 const StyledReply = Styled(reply)`
-    min-height: 200px;
     border-radius: 10px;
     background-color:#242629;
     padding: 30px;
@@ -61,6 +67,17 @@ const StyledReply = Styled(reply)`
     }
     
     .reply-header-left-reply{
+      display:flex;
+      align-items:center;
+      gap:5px;
+    }
+    .upvote{
+      display:flex;
+      align-items:center;
+      gap:5px;
+    }
+
+    .downvote{
       display:flex;
       align-items:center;
       gap:5px;
@@ -82,11 +99,14 @@ const StyledReply = Styled(reply)`
     .reply-content{
       flex:3;
       color:#94a1b2;
-      min-height:100px;
+    
       width:100%;
+      min-width: 0;
     }
     .reply-footer{
       flex:1;
+      display:flex;
+      gap:10px;
       color:white;
       min-height:30px;
       width:100%;
