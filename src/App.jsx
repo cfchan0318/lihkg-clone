@@ -4,6 +4,7 @@ import StyledPostList from "./components/post-list";
 import StyledPostListHeader from "./components/post-list-header";
 import StyledPostHeader from "./components/post-header";
 import StyledReplyList from "./components/reply-list";
+import StyledSideBar from "./components/sidebar";
 
 function App() {
   const posts = [
@@ -74,13 +75,23 @@ function App() {
       "pages": 5
     }
   ];
+
+  const [isSideBarOpen, setIsSideBarOpen] = React.useState(false);
+
+  const handleMenuToggle = () => {
+    setIsSideBarOpen(true);
+  }
+
   return (
     <div className="App">
+       <StyledSideBar isOpen={isSideBarOpen}/>
       <DBoard
         left={
           <div>
-            <StyledPostListHeader title="吹水台"/>
+           
+            <StyledPostListHeader title="吹水台" handleMenuToggle={handleMenuToggle}/>
             <StyledPostList posts={posts} />
+            
           </div>
         }
         right={

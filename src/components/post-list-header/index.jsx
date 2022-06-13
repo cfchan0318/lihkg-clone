@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledCustomButton from '../custom-button'
 
-const PostListHeader = ({ className, title }) => {
+const PostListHeader = ({ className, title, handleMenuToggle}) => {
   const handleRefresh = (e) => {
     e.preventDefault()
     console.log('You clicked refresh.')
@@ -11,7 +11,7 @@ const PostListHeader = ({ className, title }) => {
   return (
     <div className={className}>
       <div className="post-list-header-left">
-        <StyledCustomButton title="Referesh" onClick={handleRefresh}>
+        <StyledCustomButton title="Menu" onClick={handleMenuToggle}>
           <i className="fi fi-rr-menu-burger" />
         </StyledCustomButton>
       </div>
