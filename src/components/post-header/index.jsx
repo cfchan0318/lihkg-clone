@@ -8,12 +8,12 @@ const PostHeader = ({ className }) => {
         <span>asdasd</span>
       </div>
       <div className="post-header-right">
-      <i class="fi fi-rr-star"></i>
-      <i class="fi fi-rr-reply-all"></i>
-        <i class="fi fi-rr-thumbs-up"></i>
-        <i class="fi fi-rr-thumbs-down"></i>
-        <i class="fi fi-rr-picture"></i>
-        <i class="fi fi-rr-share"></i>
+      <i className="fi fi-rr-star"></i>
+      <i className="fi fi-rr-reply-all"></i>
+        <i className="fi fi-rr-thumbs-up"></i>
+        <i className="fi fi-rr-thumbs-down"></i>
+        <i className="fi fi-rr-picture"></i>
+        <i className="fi fi-rr-share"></i>
       </div>
     </div>
   )

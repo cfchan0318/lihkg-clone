@@ -26,8 +26,9 @@ const StyledPostList = styled(PostList)`
   flex-direction: column;
   background-color: #16161a;
   padding:10px;
+  padding-top:20px;
   overflow-y:scroll;
-  height:calc(100vh - 60px);
+  height:calc(100vh - 70px);
   
 
   .post {

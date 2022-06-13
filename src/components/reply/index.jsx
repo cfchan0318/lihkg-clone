@@ -38,11 +38,11 @@ const reply = ({ className }) => {
 
       <div className="reply-footer">
         <div className='upvote'>
-            <i class="fi fi-rr-thumbs-up" />
+            <i className="fi fi-rr-thumbs-up" />
             <span>123</span>
         </div>
         <div className='downvote'>
-          <i class="fi fi-rr-thumbs-down" />
+          <i className="fi fi-rr-thumbs-down" />
           <span>123</span>
         </div>
       </div>

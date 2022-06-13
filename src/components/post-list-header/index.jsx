@@ -1,16 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
+import StyledCustomButton from '../custom-button'
 
-const PostListHeader = ({ className }) => {
+const PostListHeader = ({ className, title }) => {
+  const handleRefresh = (e) => {
+    e.preventDefault()
+    console.log('You clicked refresh.')
+  }
+
   return (
     <div className={className}>
-      <div class="post-list-header-left">
-        <i onClick={() => { console.log("open")}} class="fi fi-rr-menu-burger" />   
+      <div className="post-list-header-left">
+        <StyledCustomButton title="Referesh" onClick={handleRefresh}>
+          <i className="fi fi-rr-menu-burger" />
+        </StyledCustomButton>
       </div>
-      <div class="post-list-header-center">React</div>
-      <div class="post-list-header-right">
-        <i class="fi fi-rr-refresh" />
-        <i class="fi fi-rr-add"></i>
+      <div className="post-list-header-center">{title}</div>
+      <div className="post-list-header-right">
+        <StyledCustomButton title="Referesh" onClick={handleRefresh}>
+          <i className="fi fi-rr-refresh"></i>
+        </StyledCustomButton>
+
+        <StyledCustomButton title="Create New Post" onClick={handleRefresh}>
+          <i className="fi fi-rr-add"></i>
+        </StyledCustomButton>
       </div>
     </div>
   )
@@ -27,8 +40,8 @@ const StyledPostListHeader = styled(PostListHeader)`
 
   .post-list-header-left {
     flex: 1;
-    padding-left:10px;
-    color:white;
+    padding-left: 10px;
+    color: white;
   }
   .post-list-header-center {
     flex: 1;
@@ -38,14 +51,11 @@ const StyledPostListHeader = styled(PostListHeader)`
   }
   .post-list-header-right {
     flex: 1;
-    color:white;
-    padding-right:10px;
+    color: white;
+    padding-right: 10px;
+    gap: 5px;
     display: flex;
     justify-content: flex-end;
-  }
-
-  .fi-rr-refresh{
-    margin-right: 20px;
   }
 `
 export default StyledPostListHeader

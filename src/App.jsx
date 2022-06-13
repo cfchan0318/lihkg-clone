@@ -79,7 +79,7 @@ function App() {
       <DBoard
         left={
           <div>
-            <StyledPostListHeader/>
+            <StyledPostListHeader title="吹水台"/>
             <StyledPostList posts={posts} />
           </div>
         }
