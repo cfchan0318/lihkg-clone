@@ -79,12 +79,12 @@ function App() {
   const [isSideBarOpen, setIsSideBarOpen] = React.useState(false);
 
   const handleMenuToggle = () => {
-    setIsSideBarOpen(true);
+    setIsSideBarOpen(!isSideBarOpen);
   }
 
   return (
     <div className="App">
-       <StyledSideBar isOpen={isSideBarOpen}/>
+      <StyledSideBar isOpen={isSideBarOpen} close={handleMenuToggle} />
       <DBoard
         left={
           <div>
