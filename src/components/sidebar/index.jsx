@@ -26,7 +26,7 @@ const StyledSideBar = Styled(Sidebar)`
     background-color:#242629;
 
     transition: all 0.5s;
-    -webkit-transition: all 0.25s;
+    -webkit-transition: all 0.5s;
     
     .sidebar-header{
       width:100%;
