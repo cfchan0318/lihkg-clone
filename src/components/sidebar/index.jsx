@@ -2,11 +2,11 @@ import React from 'react'
 import Styled from 'styled-components'
 import StyledCustomButton from '../custom-button'
 
-const Sidebar = ({ className, isOpen, close }) => {
+const Sidebar = ({ className,isOpen, closeOnClick}) => {
   return (
     <div className={className}>
       <div className="sidebar-header">
-        <StyledCustomButton onClick={close}>
+        <StyledCustomButton onClick={() => { closeOnClick(); }}>
           <i className="fi fi-rr-cross-small" />
         </StyledCustomButton>
       </div>
