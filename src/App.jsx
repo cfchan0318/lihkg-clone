@@ -87,16 +87,16 @@ function App() {
       <StyledSideBar isOpen={isSideBarOpen} closeOnClick={()=>{dispatch(toggle())}} />
       <DBoard
         left={
-          <div>
+          <>
             <StyledPostListHeader title="吹水台" handleMenuToggle={()=>{dispatch(toggle());}} />
             <StyledPostList posts={posts} />
-          </div>
+          </>
         }
         right={
-          <div>
+          <>
             <StyledPostHeader></StyledPostHeader>
             <StyledReplyList></StyledReplyList>
-          </div>
+          </>
         }
       />
       
