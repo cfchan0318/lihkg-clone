@@ -1,6 +1,5 @@
 export const getChannels = async () => {
-    return ({
-        "channels": [
+    return ([
             {
                 id: "3f98989d-0a6b-4c2f-8389-dedcdbcf971b",
                 name: "吹水台"
@@ -23,5 +22,6 @@ export const getChannels = async () => {
             },
 
         ]
-    });
+    );
 }
+
