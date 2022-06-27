@@ -16,11 +16,13 @@ const StyledCustomButton = Styled(CustomButton)`
     cursor: pointer;
     outline: none;
     
-  
-    height:30px;
-    width:30px;
+    line-height:2;
+    min-height:30px;
+    min-width:30px;
 
-
+    display:flex;
+    align-items:center;
+    justify-content:center;
    
     color: #fffffe;
 

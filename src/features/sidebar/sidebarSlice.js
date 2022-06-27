@@ -16,7 +16,7 @@ export const sidebarSlice = createSlice({
         channels: [],
     },
     reducers: {
-        toggle: state => {
+        toggleSidebar: state => {
             state.isOpen = !(state.isOpen);
         }
     },
@@ -29,6 +29,6 @@ export const sidebarSlice = createSlice({
 
 
 
-export const { toggle, channelsSuccess } = sidebarSlice.actions
+export const { toggleSidebar, channelsSuccess } = sidebarSlice.actions
 
 export default sidebarSlice.reducer

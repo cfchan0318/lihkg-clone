@@ -2,11 +2,16 @@ import React from 'react'
 import Styled from 'styled-components'
 import StyledCustomButton from '../custom-button'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchChannels } from '../../features/sidebar/sidebarSlice'
+import { fetchChannels,toggleSidebar } from '../../features/sidebar/sidebarSlice'
 
 const Sidebar = ({ className, isOpen, closeOnClick }) => {
   const { channels } = useSelector((state) => state.sidebar)
   const dispatch = useDispatch()
+
+  const handleChannelOnClick = (id, name) => {
+    console.log(id + " : " + name);
+    dispatch(toggleSidebar());
+  }
 
   React.useEffect(() => {
     dispatch(fetchChannels())
@@ -27,7 +32,7 @@ const Sidebar = ({ className, isOpen, closeOnClick }) => {
         <div className="sidebar-channels">
           {channels.map((channel) => (
             <div className="sidebar-channel" key={channel.id}>
-              {channel.name}
+              <StyledCustomButton title={channel.name} onClick={()=>handleChannelOnClick(channel.id,channel.name)}>{channel.name}</StyledCustomButton>
             </div>
           ))}
         </div>
@@ -67,11 +72,11 @@ const StyledSideBar = Styled(Sidebar)`
       width:100%;
       display:flex;
       flex-wrap: wrap;
+      gap: 1rem 0;
     }
 
     .sidebar-channel{
-      min-width:50%;
-      max-width:50%;
+      width: 50%;
       white-space: nowrap;
       word-break:break-word;
       overflow:hidden;

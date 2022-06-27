@@ -7,7 +7,7 @@ import StyledReplyList from "./components/reply-list";
 import StyledSideBar from "./components/sidebar";
 
 import { useSelector, useDispatch } from 'react-redux'
-import {toggle} from './features/sidebar/sidebarSlice'
+import {toggleSidebar} from './features/sidebar/sidebarSlice'
 
 function App() {
   const posts = [
@@ -84,11 +84,11 @@ function App() {
 
   return (
     <div className="App">
-      <StyledSideBar isOpen={isSideBarOpen} closeOnClick={()=>{dispatch(toggle())}} />
+      <StyledSideBar isOpen={isSideBarOpen} closeOnClick={()=>{dispatch(toggleSidebar())}} />
       <DBoard
         left={
           <>
-            <StyledPostListHeader title="吹水台" handleMenuToggle={()=>{dispatch(toggle());}} />
+            <StyledPostListHeader title="吹水台" handleMenuToggle={()=>{dispatch(toggleSidebar());}} />
             <StyledPostList posts={posts} />
           </>
         }
