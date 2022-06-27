@@ -2,14 +2,15 @@ import React from 'react'
 import Styled from 'styled-components'
 import StyledCustomButton from '../custom-button'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchChannels,toggleSidebar } from '../../features/sidebar/sidebarSlice'
+import { fetchChannels, toggleSidebar } from '../../features/sidebar/sidebarSlice'
+import { setCurrentChannel } from '../../features/post-list/postListSlice'
 
 const Sidebar = ({ className, isOpen, closeOnClick }) => {
   const { channels } = useSelector((state) => state.sidebar)
   const dispatch = useDispatch()
 
   const handleChannelOnClick = (id, name) => {
-    console.log(id + " : " + name);
+    dispatch(setCurrentChannel({id:id,name:name}));
     dispatch(toggleSidebar());
   }
 

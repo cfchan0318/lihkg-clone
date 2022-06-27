@@ -1,8 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import StyledCustomButton from '../custom-button'
 
-const PostListHeader = ({ className, title, handleMenuToggle}) => {
+const PostListHeader = ({ className, handleMenuToggle }) => {
+  const { name } = useSelector(state => state.postList.currentChannel);
+
   const handleRefresh = (e) => {
     e.preventDefault()
     console.log('You clicked refresh.')
@@ -15,7 +18,7 @@ const PostListHeader = ({ className, title, handleMenuToggle}) => {
           <i className="fi fi-rr-menu-burger" />
         </StyledCustomButton>
       </div>
-      <div className="post-list-header-center">{title}</div>
+      <div className="post-list-header-center">{name}</div>
       <div className="post-list-header-right">
         <StyledCustomButton title="Referesh" onClick={handleRefresh}>
           <i className="fi fi-rr-refresh"></i>

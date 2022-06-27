@@ -4,7 +4,10 @@ const postListSlice = createSlice(
     {
         name: 'post-list',
         initialState: {
-            currentChannel: null,
+            currentChannel: {
+                id: "",
+                name:""
+            },
         },
         reducers: {
             setCurrentChannel: (state,action) => {
